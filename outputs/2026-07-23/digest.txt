@@ -1,12 +1,9 @@
 📋 IDOL TREND WATCH 2026/07/23 投稿文生成完了
 
-◆ アイドル TOP5
-1位 学園アイドルマスター「雨夜燕 STEP3 告知PV」 (10.9万回) https://www.youtube.com/watch?v=T3V7_Dsq0r0
-2位 アイドルマスター ミリオンライブ！「BLACK LIPS」 (2.1万回) https://www.youtube.com/watch?v=VTuhTzVMrKE
-3位 ドリームサキュバス「わがままナイトメア」 (18.2万回) https://www.youtube.com/watch?v=3M8sWhLfEoI
-4位 MADAMADA「まだまだ」 (6.3万回) https://www.youtube.com/watch?v=PMM0GPwBmGM
-5位 ENJIN「ハナ雪」 (1,801回) https://www.youtube.com/watch?v=dmSjk3MTGZ4
-▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=T3V7_Dsq0r0,VTuhTzVMrKE,3M8sWhLfEoI,PMM0GPwBmGM,dmSjk3MTGZ4
+◆ アイドル TOP2
+1位 ゆりぴ〜「わんわんアイドル」 (2.3万回) https://www.youtube.com/watch?v=7OsFXLcAJ1o
+2位 ENJIN「Major」 (2,976回) https://www.youtube.com/watch?v=JND8JQcw1E0
+▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=7OsFXLcAJ1o,JND8JQcw1E0
 
 outputs/ フォルダの各ファイルを確認してコピペ投稿してください:
 x.txt / threads.txt / instagram.txt / note.md / 各動画
