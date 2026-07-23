@@ -32,7 +32,7 @@ JST = timezone(timedelta(hours=9))
 
 ROOT_FOLDER_NAME = "IDOL TREND WATCH"
 UPLOAD_FILES = ["reel.mp4", "feed.mp4", "digest.txt", "x.txt",
-                "threads.txt", "instagram.txt", "note.md", "weekly.txt"]
+                "threads.txt", "instagram.txt", "note.md"]
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 API = "https://www.googleapis.com/drive/v3"
