@@ -335,15 +335,15 @@ def rank_label(i: int) -> str:
 
 
 def podium_order(top: list[dict]) -> list[int]:
-    """発表順: 3位→2位→1位(存在するものだけ)"""
-    return [i for i in (2, 1, 0) if i < len(top)]
+    """発表順: 1位→2位→3位(存在するものだけ)"""
+    return [i for i in (0, 1, 2) if i < len(top)]
 
 
 def x_section(top: list[dict], label: str) -> list[str]:
     n = len(top)
     lines = [f"◤ 本日の{label} TOP{n} ◢",
              "",
-             "3位からのカウントダウンで発表🧵",
+             "今日いちばん伸びているのは…🧵",
              "",
              CONFIG["hashtags"],
              "\n--- ↓スレッドに続ける ---\n"]
@@ -380,8 +380,7 @@ def render_x(rankings: dict, date_s: str) -> str:
 
 def threads_section(top: list[dict], label: str) -> list[str]:
     n = len(top)
-    lines = [f"🎤 本日の{label} TOP{n}",
-             "3位からカウントダウン!", ""]
+    lines = [f"🎤 本日の{label} TOP{n}", ""]
     for i in podium_order(top):
         c = top[i]
         prod = f"「{c['product']}」" if c.get("product") else ""
@@ -446,8 +445,7 @@ def ig_section(top: list[dict], label: str, date_s: str) -> list[str]:
             "リンクはプロフィール・キャプションから",
             "毎朝7:00更新", "",
             "── キャプション ──",
-            f"本日の{label} TOP{n}({date_s})",
-            "3位からカウントダウンで発表!", ""]
+            f"本日の{label} TOP{n}({date_s})", ""]
     for i, c in enumerate(top):
         out.append(f"{i + 1}位 {c['company']} → {c['url']}")
     out += ["", CONFIG["hashtags"] + " #アイドル好きと繋がりたい", ""]
