@@ -68,7 +68,7 @@ CONFIG = {
     "hashtags": "#アイドル #新曲 #MV #推し活 #ランキング",
     # メディア名
     "brand": "IDOL TREND WATCH",
-    "tagline": "いま伸びているアイドルコンテンツを毎朝届ける速報",
+    "tagline": "いま伸びているアイドルコンテンツを毎週届ける速報",
 }
 
 JST = timezone(timedelta(hours=9))
@@ -344,7 +344,7 @@ def podium_order(top: list[dict]) -> list[int]:
 
 def x_section(top: list[dict], label: str) -> list[str]:
     n = len(top)
-    lines = [f"◤ 本日の{label} TOP{n} ◢",
+    lines = [f"◤ 今週の{label} TOP{n} ◢",
              "",
              "今日いちばん伸びているのは…🧵",
              "",
@@ -383,7 +383,7 @@ def render_x(rankings: dict, date_s: str) -> str:
 
 def threads_section(top: list[dict], label: str) -> list[str]:
     n = len(top)
-    lines = [f"🎤 本日の{label} TOP{n}", ""]
+    lines = [f"🎤 今週の{label} TOP{n}", ""]
     for i in podium_order(top):
         c = top[i]
         prod = f"「{c['product']}」" if c.get("product") else ""
@@ -420,7 +420,7 @@ def ig_section(top: list[dict], label: str, date_s: str) -> list[str]:
     out = [f"■ {label}用カルーセル原稿",
            "",
            "── スライド1(表紙) ──",
-           f"本日の{label} TOP{n}",
+           f"今週の{label} TOP{n}",
            date_s,
            CONFIG["brand"], ""]
     slide_no = 2
@@ -446,9 +446,9 @@ def ig_section(top: list[dict], label: str, date_s: str) -> list[str]:
         slide_no += 1
     out += [f"── スライド{slide_no}(最終) ──",
             "リンクはプロフィール・キャプションから",
-            "毎朝7:00更新", "",
+            "毎週更新", "",
             "── キャプション ──",
-            f"本日の{label} TOP{n}({date_s})", ""]
+            f"今週の{label} TOP{n}({date_s})", ""]
     for i, c in enumerate(top):
         out.append(f"{i + 1}位 {c['company']} → {c['url']}")
     out += ["", CONFIG["hashtags"] + " #アイドル好きと繋がりたい", ""]
@@ -502,10 +502,10 @@ def note_section(top: list[dict], label: str) -> list[str]:
 
 
 def render_note(rankings: dict, date_s: str) -> str:
-    lines = [f"# 【{date_s}】本日のアイドルコンテンツランキング|{CONFIG['brand']}", "",
+    lines = [f"# 【{date_s}】今週のアイドルコンテンツTOP10|{CONFIG['brand']}", "",
              f"{CONFIG['tagline']}。",
              "YouTube上の新着MV・パフォーマンス映像などを再生数の伸び・エンゲージメントで"
-             "自動集計し、AIが分析したデイリーランキングです。人気投票ではなく、"
+             "自動集計し、AIが分析した週間ランキングです。集計対象は直近7日の新着。人気投票ではなく、"
              "コンテンツの話題度をデータで測る趣旨のランキングです。"
              "映像は各公式チャンネルでご覧ください。", ""]
     for key, label in CONFIG["categories"]:
@@ -706,10 +706,6 @@ def main():
         "note.md": render_note(rankings, date_s),
         "digest.txt": render_digest(rankings, date_s),
     }
-    weekly = render_weekly(archive, today)
-    if weekly:
-        files["weekly.txt"] = weekly
-
     for name, text in files.items():
         (out_dir / name).write_text(text, encoding="utf-8")
         print(f"[info] 出力: {out_dir / name}")
