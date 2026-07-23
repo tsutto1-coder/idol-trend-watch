@@ -1,26 +1,22 @@
 📋 IDOL TREND WATCH 2026/07/23 投稿文生成完了
 
-◆ 女性アイドル TOP6
-1位 乃木坂46「命の色」 (28.0万回) https://www.youtube.com/watch?v=xpruiYFMF_g
-2位 RESCENE「Pretty Girl」 (25.1万回) https://www.youtube.com/watch?v=dglF9_PJqto
-3位 AKB48「好きish」 (16.6万回) https://www.youtube.com/watch?v=6dXl-YNndjU
-4位 モーニング娘。'26「Lonely...But not Alone」 (10.0万回) https://www.youtube.com/watch?v=4R0-nANsVoo
-5位 PG「SUPERSTAR」 (14.3万回) https://www.youtube.com/watch?v=nNlVeC3nPW8
-6位 UtaGe!「ウタゲサマーっ!!」 (5,016回) https://www.youtube.com/watch?v=uhnhmGMRMBE
-▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=xpruiYFMF_g,dglF9_PJqto,6dXl-YNndjU,4R0-nANsVoo,nNlVeC3nPW8,uhnhmGMRMBE
+◆ 女性アイドル TOP2
+1位 AURA GIRLS「Tuzak」 (9.0万回) https://www.youtube.com/watch?v=v6yPRb7NEeg
+2位 RouteHeart「あなたのせいだよ」 (1,608回) https://www.youtube.com/watch?v=6H5kbqOsyMI
+▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=v6yPRb7NEeg,6H5kbqOsyMI
 
 ◆ 男性アイドル TOP10
-1位 BTS「NORMAL」 (881.8万回) https://www.youtube.com/watch?v=GEk4jHwfFTA
-2位 BMSG (BE:FIRST / MAZZEL / STARGLOW / Aile The Shota)「YAO - 777 (feat. Awich, CHICO CARLITO, ONE OK ROCK & Paledusk)」 (62.5万回) https://www.youtube.com/watch?v=-C9KBQB49wE
-3位 M!LK「しおざきわんだーらんど」 (86.8万回) https://www.youtube.com/watch?v=lYWFDKop744
-4位 BMSG (BE:FIRST / MAZZEL / STARGLOW / Aile The Shota)「Awich - Frontiers (Prod. Chaki Zulu)」 (107.3万回) https://www.youtube.com/watch?v=ETW7-3gEdjo
-5位 SixTONES「マイオンリー」 (11.9万回) https://www.youtube.com/watch?v=LQG2pojqMbQ
-6位 SixTONES「マイオンリー」 (19.1万回) https://www.youtube.com/watch?v=GjJ67c0c9zI
-7位 SixTONES「マイオンリー」 (24.5万回) https://www.youtube.com/watch?v=-kXjUcCPTHo
-8位 SixTONES「マイオンリー」 (33.2万回) https://www.youtube.com/watch?v=gy4yky5sAJo
-9位 King & Prince「So Honey」 (116.5万回) https://www.youtube.com/watch?v=35dPYp1-nQo
-10位 SixTONES「Dance Forever」 (28.4万回) https://www.youtube.com/watch?v=DOuB3b7G8x4
-▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=GEk4jHwfFTA,-C9KBQB49wE,lYWFDKop744,ETW7-3gEdjo,LQG2pojqMbQ,GjJ67c0c9zI,-kXjUcCPTHo,gy4yky5sAJo,35dPYp1-nQo,DOuB3b7G8x4
+1位 ONE N' ONLY「Samba de Night Fever」 (17.8万回) https://www.youtube.com/watch?v=pei8KQluSNo
+2位 SixTONES「Dance Forever」 (23.5万回) https://www.youtube.com/watch?v=fLl3Y8FFwmo
+3位 SixTONES「マイオンリー」 (17.9万回) https://www.youtube.com/watch?v=XNch6NPbbaw
+4位 SixTONES「Dance Forever」 (16.5万回) https://www.youtube.com/watch?v=HHLPEHkm8Mg
+5位 SixTONES「マイオンリー」 (13.5万回) https://www.youtube.com/watch?v=XfE01xSJod4
+6位 M!LK「You!Joy!Parade!」 (900.0万回) https://www.youtube.com/watch?v=3C0EOqt7sqA
+7位 FANTASTICS from EXILE TRIBE「SUNFLOWER」 (3.4万回) https://www.youtube.com/watch?v=d7tLCiGhuJA
+8位 SixTONES「Dance Forever」 (1547.5万回) https://www.youtube.com/watch?v=lmYusdmVg28
+9位 中島健人「鬼事」 (670.0万回) https://www.youtube.com/watch?v=wp_4AThBtCA
+10位 ONE OR EIGHT「YANKEE SQUAT」 (20.8万回) https://www.youtube.com/watch?v=k6H262GN2lk
+▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=pei8KQluSNo,fLl3Y8FFwmo,XNch6NPbbaw,HHLPEHkm8Mg,XfE01xSJod4,3C0EOqt7sqA,d7tLCiGhuJA,lmYusdmVg28,wp_4AThBtCA,k6H262GN2lk
 
 outputs/ フォルダの各ファイルを確認してコピペ投稿してください:
 x.txt / threads.txt / instagram.txt / note.md / 各動画
