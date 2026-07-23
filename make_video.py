@@ -37,7 +37,7 @@ OUT_ROOT = BASE_DIR / "outputs"
 JST = timezone(timedelta(hours=9))
 
 BRAND = "IDOL TREND WATCH"
-TAGLINE = "いま伸びているアイドルコンテンツを毎朝届ける速報"
+TAGLINE = "いま伸びているアイドルコンテンツを毎週届ける速報"
 
 # ============================================================
 # 配色設定
@@ -171,7 +171,7 @@ class Renderer:
         d.rectangle([self.w // 2 - self.y(60), self.y(280),
                      self.w // 2 + self.y(60), self.y(288)], fill=RANK_COLORS[0])
         yy = self.y(400)
-        yy = self.center_line(d, yy, "本日の", self.f(80), WHITE) + self.y(40)
+        yy = self.center_line(d, yy, "今週の", self.f(80), WHITE) + self.y(40)
         yy = self.center_line(d, yy, label, self.f(110), WHITE) + self.y(50)
         yy = self.center_line(d, yy, f"TOP{n}", self.f(150), RANK_COLORS[0]) + self.y(85)
         yy = self.center_line(d, yy, date_s, self.f(56), WHITE) + self.y(120)
@@ -261,7 +261,7 @@ class Renderer:
         yy = self.y(660)
         yy = self.center_line(d, yy, "各CMのリンクは", self.f(72), WHITE) + self.y(50)
         yy = self.center_line(d, yy, "投稿本文からチェック", self.f(72), WHITE) + self.y(110)
-        self.center_line(d, yy, "毎朝 7:00 更新", self.f(64), RANK_COLORS[0])
+        self.center_line(d, yy, "毎週更新", self.f(64), RANK_COLORS[0])
         self.footer(d)
         return img
 
