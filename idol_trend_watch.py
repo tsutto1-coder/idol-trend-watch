@@ -43,17 +43,20 @@ CONFIG = {
         "アイドル MV", "アイドル 新曲", "MV 公開", "Music Video 公開",
         "ダンスプラクティス", "Dance Practice", "アイドル パフォーマンス",
         "新曲 Performance Video",
+        # 男女それぞれを狙った補強クエリ(ランキング10件を揃えやすくする)
+        "女性アイドル MV", "ガールズグループ 新曲", "アイドル 新曲 女性",
+        "男性アイドル MV", "ボーイズグループ 新曲", "アイドル 新曲 男性",
     ],
     # 何日以内に公開された動画を対象にするか
     "lookback_days": 7,
     # 掲載保持期間(3か月)
     "retention_days": 92,
     # AI分析に回す最大候補数(話題性スコア上位から)
-    "max_candidates": 35,
+    "max_candidates": 30,
     # 男女それぞれの最終ランキング件数
     "top_n": 10,
-    # ランキングの掲載順
-    "categories": [("female", "女性アイドル"), ("male", "男性アイドル")],
+    # ランキング区分(統合1本)
+    "categories": [("all", "アイドル")],
     # K-POPを含めるか(False なら日本のアイドルのみ)
     "include_kpop": True,
     # 動画の長さ制限(秒)。MV・ダンス動画は30秒〜8分程度
@@ -291,7 +294,7 @@ def analyze_with_claude(candidates: list[dict]) -> list[dict]:
         "https://api.anthropic.com/v1/messages",
         {
             "model": CONFIG["claude_model"],
-            "max_tokens": 8000,
+            "max_tokens": 10000,
             "system": ANALYSIS_SYSTEM,
             "messages": [{
                 "role": "user",
@@ -659,16 +662,10 @@ def notify_discord(text: str):
 
 
 def split_by_category(items: list[dict]) -> dict:
-    """分析済みリストを男女ランキングに振り分け(mixedは両方に掲載)"""
-    rankings = {key: [] for key, _ in CONFIG["categories"]}
-    for c in sorted(items, key=lambda x: x.get("buzz_score", 0), reverse=True):
-        cat = c.get("category")
-        if cat in rankings:
-            rankings[cat].append(c)
-        elif cat == "mixed":
-            for key in rankings:
-                rankings[key].append(c)
-    return {k: v[:CONFIG["top_n"]] for k, v in rankings.items()}
+    """分析済みリストを統合ランキングへ(アイドル以外=otherは除外)"""
+    ok = [c for c in sorted(items, key=lambda x: x.get("buzz_score", 0), reverse=True)
+          if c.get("category") in ("female", "male", "mixed")]
+    return {"all": ok[:CONFIG["top_n"]]}
 
 
 def main():
