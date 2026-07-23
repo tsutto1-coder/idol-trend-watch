@@ -250,6 +250,33 @@ YouTube動画のメタデータ(タイトル・チャンネル名・説明文・
 ]"""
 
 
+def parse_json_array_lenient(text: str) -> list[dict]:
+    """Claudeの返答からJSON配列を取り出す。
+    途中で切れていても、完成しているオブジェクトだけ救出する。"""
+    text = re.sub(r"^```(json)?|```$", "", text.strip(), flags=re.MULTILINE).strip()
+    start, end = text.find("["), text.rfind("]")
+    if start != -1 and end > start:
+        try:
+            return json.loads(text[start:end + 1])
+        except json.JSONDecodeError:
+            pass  # 下の救出処理へ
+    # 完全なJSONオブジェクト({...})を先頭から順に拾えるだけ拾う
+    dec = json.JSONDecoder()
+    objs, i = [], text.find("{")
+    while i != -1:
+        try:
+            obj, consumed = dec.raw_decode(text[i:])
+            if isinstance(obj, dict) and obj.get("video_id"):
+                objs.append(obj)
+            i = text.find("{", i + consumed)
+        except json.JSONDecodeError:
+            i = text.find("{", i + 1)
+    if not objs:
+        raise RuntimeError("Claudeの返答からJSONを取り出せませんでした:\n" + text[:500])
+    print(f"[warn] JSONが不完全だったため {len(objs)} 件を救出して続行します", file=sys.stderr)
+    return objs
+
+
 def analyze_with_claude(candidates: list[dict]) -> list[dict]:
     api_key = os.environ.get("ANTHROPIC_API_KEY")
     if not api_key:
