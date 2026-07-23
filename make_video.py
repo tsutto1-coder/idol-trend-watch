@@ -26,7 +26,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # 出力フォーマット: ファイル名 → (幅, 高さ)
 SIZES = {"reel": (1080, 1920), "feed": (1080, 1350)}
-CATEGORIES = [("female", "女性アイドル"), ("male", "男性アイドル")]
+CATEGORIES = [("all", "アイドル")]
 
 SLIDE_SEC = 4.6      # 1スライドの表示秒数
 FADE = 0.4           # フェード秒数
@@ -321,7 +321,8 @@ def main():
             if n > 3:
                 slides.append(r.list_slide(top[3:], n))
             slides.append(r.outro())
-            out_path = day_dir / f"{key}_{size_name}.mp4"
+            fname = f"{size_name}.mp4" if key == "all" else f"{key}_{size_name}.mp4"
+            out_path = day_dir / fname
             build_video(slides, out_path, w, h)
             size_mb = out_path.stat().st_size / 1024 / 1024
             print(f"[info] 動画生成完了: {out_path} ({w}x{h} / {size_mb:.1f}MB / "
