@@ -1,9 +1,10 @@
 📋 IDOL TREND WATCH 2026/07/23 投稿文生成完了
 
-◆ アイドル TOP2
-1位 ゆりぴ〜「わんわんアイドル」 (2.3万回) https://www.youtube.com/watch?v=7OsFXLcAJ1o
-2位 ENJIN「Major」 (2,976回) https://www.youtube.com/watch?v=JND8JQcw1E0
-▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=7OsFXLcAJ1o,JND8JQcw1E0
+◆ アイドル TOP3
+1位 Pretty Chuu「トレンド大戦争に勝ちたいだけなの♡」 (1.8万回) https://www.youtube.com/watch?v=Y4DsL-6MwCk
+2位 Da-iCE「アンリミテッド」 (44.1万回) https://www.youtube.com/watch?v=XRVcv9ZBTYE
+3位 PG（ピージー）「SUPERSTAR」 (1.3万回) https://www.youtube.com/watch?v=VnaqLrrKw5A
+▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=Y4DsL-6MwCk,XRVcv9ZBTYE,VnaqLrrKw5A
 
 outputs/ フォルダの各ファイルを確認してコピペ投稿してください:
 x.txt / threads.txt / instagram.txt / note.md / 各動画
