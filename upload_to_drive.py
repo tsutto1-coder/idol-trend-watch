@@ -31,8 +31,8 @@ OUT_ROOT = BASE_DIR / "outputs"
 JST = timezone(timedelta(hours=9))
 
 ROOT_FOLDER_NAME = "IDOL TREND WATCH"
-UPLOAD_FILES = ["female_reel.mp4", "female_feed.mp4", "male_reel.mp4", "male_feed.mp4",
-                "digest.txt", "x.txt", "threads.txt", "instagram.txt", "note.md", "weekly.txt"]
+UPLOAD_FILES = ["reel.mp4", "feed.mp4", "digest.txt", "x.txt",
+                "threads.txt", "instagram.txt", "note.md", "weekly.txt"]
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 API = "https://www.googleapis.com/drive/v3"
