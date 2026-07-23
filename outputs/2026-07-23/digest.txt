@@ -1,22 +1,13 @@
 📋 IDOL TREND WATCH 2026/07/23 投稿文生成完了
 
-◆ 女性アイドル TOP2
-1位 AURA GIRLS「Tuzak」 (9.0万回) https://www.youtube.com/watch?v=v6yPRb7NEeg
-2位 RouteHeart「あなたのせいだよ」 (1,608回) https://www.youtube.com/watch?v=6H5kbqOsyMI
-▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=v6yPRb7NEeg,6H5kbqOsyMI
-
-◆ 男性アイドル TOP10
-1位 ONE N' ONLY「Samba de Night Fever」 (17.8万回) https://www.youtube.com/watch?v=pei8KQluSNo
-2位 SixTONES「Dance Forever」 (23.5万回) https://www.youtube.com/watch?v=fLl3Y8FFwmo
-3位 SixTONES「マイオンリー」 (17.9万回) https://www.youtube.com/watch?v=XNch6NPbbaw
-4位 SixTONES「Dance Forever」 (16.5万回) https://www.youtube.com/watch?v=HHLPEHkm8Mg
-5位 SixTONES「マイオンリー」 (13.5万回) https://www.youtube.com/watch?v=XfE01xSJod4
-6位 M!LK「You!Joy!Parade!」 (900.0万回) https://www.youtube.com/watch?v=3C0EOqt7sqA
-7位 FANTASTICS from EXILE TRIBE「SUNFLOWER」 (3.4万回) https://www.youtube.com/watch?v=d7tLCiGhuJA
-8位 SixTONES「Dance Forever」 (1547.5万回) https://www.youtube.com/watch?v=lmYusdmVg28
-9位 中島健人「鬼事」 (670.0万回) https://www.youtube.com/watch?v=wp_4AThBtCA
-10位 ONE OR EIGHT「YANKEE SQUAT」 (20.8万回) https://www.youtube.com/watch?v=k6H262GN2lk
-▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=pei8KQluSNo,fLl3Y8FFwmo,XNch6NPbbaw,HHLPEHkm8Mg,XfE01xSJod4,3C0EOqt7sqA,d7tLCiGhuJA,lmYusdmVg28,wp_4AThBtCA,k6H262GN2lk
+◆ アイドル TOP6
+1位 XlamV「One Way」 (9,622回) https://www.youtube.com/watch?v=8ZzMtWq2N18
+2位 XlamV「One Way」 (4,614回) https://www.youtube.com/watch?v=hztCYJmmejg
+3位 INUWASI「Sirius」 (2,455回) https://www.youtube.com/watch?v=ODi4_J92Lrg
+4位 ミラきゅる (6,458回) https://www.youtube.com/watch?v=sLkBJl4r3e4
+5位 イソメン倶楽部 (4,787回) https://www.youtube.com/watch?v=fCrS_OyZaQY
+6位 イソメン倶楽部 (2,712回) https://www.youtube.com/watch?v=uI1Z6Oq6Keg
+▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=8ZzMtWq2N18,hztCYJmmejg,ODi4_J92Lrg,sLkBJl4r3e4,fCrS_OyZaQY,uI1Z6Oq6Keg
 
 outputs/ フォルダの各ファイルを確認してコピペ投稿してください:
 x.txt / threads.txt / instagram.txt / note.md / 各動画
