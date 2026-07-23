@@ -1,11 +1,7 @@
-
-name: IDOL TREND WATCH Daily
+name: IDOL TREND WATCH Weekly
 
 on:
-  schedule:
-    # 毎日 22:00 UTC = 翌朝 7:00 JST
-    - cron: "0 22 * * *"
-  workflow_dispatch: {}  # 手動実行も可能
+  workflow_dispatch: {}  # 手動実行のみ(Actionsの「Run workflow」ボタンで週1回実行)
 
 permissions:
   contents: write
