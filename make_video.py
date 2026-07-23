@@ -317,7 +317,7 @@ def main():
         for size_name, (w, h) in SIZES.items():
             r = Renderer(w, h, palette)
             slides = [r.cover(disp_date, n, label)]
-            slides += [r.cm_slide(i, top[i]) for i in (2, 1, 0) if i < n]
+            slides += [r.cm_slide(i, top[i]) for i in (0, 1, 2) if i < n]
             if n > 3:
                 slides.append(r.list_slide(top[3:], n))
             slides.append(r.outro())
