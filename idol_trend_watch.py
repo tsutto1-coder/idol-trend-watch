@@ -94,8 +94,19 @@ def http_post_json(url: str, payload: dict, headers: dict) -> dict:
     body = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=body, method="POST",
                                  headers={"Content-Type": "application/json", **headers})
-    with urllib.request.urlopen(req, timeout=120) as res:
-        return json.loads(res.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=120) as res:
+            return json.loads(res.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        try:
+            detail = e.read().decode("utf-8")[:600]
+        except Exception:
+            detail = "(詳細取得不可)"
+        hint = ""
+        if e.code == 400 and ("credit" in detail or "billing" in detail.lower()):
+            hint = "\n→ Anthropic APIのクレジット残高切れの可能性が高いです。" \
+                   "platform.claude.com のBillingで残高を確認・チャージしてください。"
+        raise RuntimeError(f"APIエラー HTTP {e.code} ({url}):\n{detail}{hint}") from None
 
 
 def parse_iso_duration(s: str) -> int:
