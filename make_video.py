@@ -315,6 +315,27 @@ class Renderer:
                   width=max(self.y(3), 1))
         return yy + self.y(40)
 
+    def hero_name(self, img: Image.Image, yy: int, text: str, metal, max_w) -> int:
+        """アイドル名を主役として大きくメタリック描画。
+        1行に収まる最大サイズを優先し、収まらなければ中央で割った2行をバランス良く。"""
+        d = ImageDraw.Draw(img)
+        # まず1行で入る最大サイズを探す
+        for size in (124, 112, 100, 90, 80, 72):
+            fnt = self.f(size)
+            if d.textlength(text, font=fnt) <= max_w:
+                return self.metal_text(img, yy, text, fnt, metal)
+        # 2行構成(文字数の真ん中で分割し、両行が収まるサイズに)
+        half = (len(text) + 1) // 2
+        lines = [text[:half], text[half:]]
+        fnt = self.f(72)
+        for size in (104, 92, 82, 72, 64):
+            fnt = self.f(size)
+            if all(d.textlength(ln, font=fnt) <= max_w for ln in lines):
+                break
+        for ln in lines:
+            yy = self.metal_text(img, yy, ln, fnt, metal) + self.y(18)
+        return yy - self.y(18)
+
     # --- スライド ---
     def cover(self, date_s: str, n: int, label: str) -> Image.Image:
         img = self.bg()
@@ -345,29 +366,29 @@ class Renderer:
         metal = metal_for_rank(rank) or METAL_GOLD
 
         # メタリック順位バッジ
-        cx, cy, r = self.w // 2, self.y(300), self.y(118)
+        cx, cy, r = self.w // 2, self.y(265), self.y(100)
         d = ImageDraw.Draw(img)
         d.ellipse([cx - r - self.y(14), cy - r - self.y(14),
                    cx + r + self.y(14), cy + r + self.y(14)],
                   outline=GOLD_FLAT, width=max(self.y(3), 1))
         self.metal_circle(img, cx, cy, r, metal)
         d = ImageDraw.Draw(img)
-        fnt = self.f(70)
+        fnt = self.f(60)
         label = rank_label(rank)
-        d.text((cx - d.textlength(label, font=fnt) // 2, cy - self.y(46)),
+        d.text((cx - d.textlength(label, font=fnt) // 2, cy - self.y(40)),
                label, font=fnt, fill=INK_DARK)
 
-        # コンテンツパネル
-        top = self.y(490)
-        img = self.panel(img, self.y(70), top, self.w - self.y(70), self.h - self.y(370))
+        # コンテンツパネル(アイドル名がメイン)
+        top = self.y(420)
+        img = self.panel(img, self.y(60), top, self.w - self.y(60), self.h - self.y(370))
+        yy = top + self.y(80)
+        yy = self.hero_name(img, yy, c.get("company", ""), metal, self.w - self.y(210))
         d = ImageDraw.Draw(img)
-        yy = top + self.y(75)
-        yy = self.center_wrapped(d, yy, c.get("company", ""), self.f(78), WHITE,
-                                 self.w - self.y(260))
+        yy += self.y(26)
         if c.get("product"):
-            yy = self.center_wrapped(d, yy + self.y(6), f"「{c['product']}」",
-                                     self.f(56), acc, self.w - self.y(260))
-        yy += self.y(46)
+            yy = self.center_wrapped(d, yy, f"「{c['product']}」",
+                                     self.f(54), acc, self.w - self.y(240))
+        yy += self.y(40)
         yy = self.divider(d, yy) + self.y(26)
 
         yy = self.center_wrapped(d, yy, c.get("hitokoto", ""), self.f(54, heavy=False),
