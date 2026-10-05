@@ -19,7 +19,7 @@ jobs:
       - name: Install video dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk
+          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk fonts-mplus
           pip install --quiet pillow
 
       - name: Run IDOL TREND WATCH
