@@ -1,0 +1,16 @@
+📋 IDOL TREND WATCH 2026/11/06 投稿文生成完了
+
+◆ アイドル TOP9
+1位 JISOO「ADDICTED」 (269.4万回) https://www.youtube.com/watch?v=dND8ysuZqlA
+2位 BE:FIRST「NOW U KNOW」 (52.5万回) https://www.youtube.com/watch?v=uFedXGeJf78
+3位 Travis Japan「チェックメイト」 (40.8万回) https://www.youtube.com/watch?v=NvXtDLaQ3D4
+4位 櫻坂46「キスが苦い」 (16.9万回) https://www.youtube.com/watch?v=k_3YTGgZJp0
+5位 RESCENE「With」 (206.9万回) https://www.youtube.com/watch?v=IFQYgQ6LEh4
+6位 HANA「Slidin」 (378.0万回) https://www.youtube.com/watch?v=RbFJ-eb_7vs
+7位 STARGLOW「Slam Dunk」 (18.4万回) https://www.youtube.com/watch?v=BBswd_c4iyU
+8位 ワルキューレ「一度だけの恋なら」 (27.2万回) https://www.youtube.com/watch?v=GzCutojKxZE
+9位 T.N.T「RADIANT」 (5.0万回) https://www.youtube.com/watch?v=RqZ_65YXZJc
+▶️ 連続再生チェック: https://www.youtube.com/watch_videos?video_ids=dND8ysuZqlA,uFedXGeJf78,NvXtDLaQ3D4,k_3YTGgZJp0,IFQYgQ6LEh4,RbFJ-eb_7vs,BBswd_c4iyU,GzCutojKxZE,RqZ_65YXZJc
+
+outputs/ フォルダの各ファイルを確認してコピペ投稿してください:
+x.txt / threads.txt / instagram.txt / note.md / 各動画
